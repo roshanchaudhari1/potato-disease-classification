@@ -1,151 +1,148 @@
-# 🥔 Potato Leaf Disease Classification
+🥔 Potato Leaf Disease Classification
+A deep learning-powered web application that classifies potato leaf images into three categories: Late Blight, Healthy, and Early Blight. Built using a CNN model and deployed with Streamlit.
 
-A deep learning-based web application for classifying potato leaf diseases into three categories: Late Blight, Healthy, and Early Blight.
-
-## 📋 Project Overview
-
-This project uses a Convolutional Neural Network (CNN) to classify potato leaf images into three categories:
-- Late Blight
-- Healthy
-- Early Blight
-
-The model was trained on a comprehensive dataset of potato leaf images and achieves high accuracy in disease classification.
-
-## 🛠️ Technical Stack
-
-- **Deep Learning Framework**: TensorFlow 2.10.0
-- **Web Interface**: Streamlit
-- **Image Processing**: Pillow, OpenCV
-- **Data Processing**: NumPy
-- **Visualization**: Matplotlib
-
-## 📁 Project Structure
-
-```
+📁 Project Structure
+bash
+Copy
+Edit
 potato-disease-classification/
-├── app.py                  # Streamlit web application
-├── potato_disease_model1.keras  # Trained model file
-├── requirements.txt        # Python dependencies
-└── Potato Leaf Disease Classification project 2.ipynb  # Model development notebook
-```
+├── .ipynb_checkpoints/                     # Jupyter auto-save files (can be ignored)
+├── PlantVillage/                           # Raw dataset folder (from PlantVillage)
+├── datset/                                 # Possibly preprocessed or organized dataset
+├── Potato_Unknown leafs/                   # Images with unknown classification
+├── Potato Leaf Disease Classification project 2.ipynb  # Jupyter notebook for model training
+├── README.md                               # Project overview and instructions
+├── app.py                                  # Streamlit web app
+├── git/                                    # (Unclear content – maybe backup or config folder)
+├── potato_disease_model1.keras             # Trained CNN model
+├── requirements.txt                        # Python dependencies
+📋 Project Overview
+This project uses a Convolutional Neural Network (CNN) to identify and classify potato leaf diseases. It features a user-friendly Streamlit interface where users can upload an image and receive:
 
-## 🚀 Getting Started
+Disease prediction
 
-### Prerequisites
+Confidence scores
 
-- Python 3.10
-- pip (Python package manager)
+Health tips based on class
 
-### Installation
+🛠️ Technologies Used
+TensorFlow 2.10.0 – Model training and inference
 
-1. Clone the repository:
-```bash
-git clone [your-repository-url]
+Streamlit – Interactive web interface
+
+Pillow, OpenCV – Image processing
+
+NumPy – Numerical operations
+
+Matplotlib – Visualizations in the notebook
+
+🚀 Getting Started
+Prerequisites
+Python 3.10 or later
+
+pip package manager
+
+Installation
+Clone the Repository
+
+bash
+Copy
+Edit
+git clone https://github.com/roshanchaudhari1/potato-disease-classification.git
 cd potato-disease-classification
-```
+Create a Virtual Environment
 
-2. Create and activate a virtual environment:
-```bash
+bash
+Copy
+Edit
 python -m venv potato_env
-.\potato_env\Scripts\activate  # On Windows
-```
+.\potato_env\Scripts\activate  # For Windows
+Install Dependencies
 
-3. Install required packages:
-```bash
+bash
+Copy
+Edit
 pip install -r requirements.txt
-```
+▶️ Running the Application
+Activate the environment:
 
-### Running the Application
+bash
+Copy
+Edit
+.\potato_env\Scripts\activate
+Start the Streamlit server:
 
-1. Activate the virtual environment:
-```bash
-.\potato_env\Scripts\activate  # On Windows
-```
-
-2. Run the Streamlit app:
-```bash
+bash
+Copy
+Edit
 streamlit run app.py
-```
+Open your browser and go to:
 
-3. Open your web browser and navigate to:
-```
+arduino
+Copy
+Edit
 http://localhost:8501
-```
+🖼️ How to Use the App
+Upload an Image of a potato leaf (JPG, JPEG, PNG)
 
-## 🖼️ Using the Application
+The app will:
 
-1. **Upload an Image**:
-   - Click the "Choose a potato leaf image..." button
-   - Select an image of a potato leaf (supports JPG, JPEG, PNG formats)
+Display the uploaded image
 
-2. **View Results**:
-   - The application will display:
-     - Uploaded image
-     - Predicted disease class
-     - Confidence score
-     - Probability distribution across all classes
-     - Health status message
+Predict the disease
 
-## 🧠 Model Details
+Show confidence scores
 
-- **Architecture**: Convolutional Neural Network (CNN)
-- **Input Size**: 256x256 pixels
-- **Output Classes**: 3 (Late Blight, Healthy, Early Blight)
-- **Training Data**: Comprehensive dataset of potato leaf images
-- **Performance**: High accuracy in disease classification
+Display advice or status based on prediction
 
-## 📊 Class Descriptions
+🧠 Model Details
+Model Architecture: CNN with convolution, pooling, dense layers
 
-1. **Late Blight**
-   - Caused by the fungus-like organism *Phytophthora infestans*
-   - Symptoms: Dark, water-soaked spots, white fuzzy growth
-   - Can destroy crops within days
+Image Size: Resized to 256x256
 
-2. **Healthy**
-   - Normal potato leaves without disease
-   - Green, uniform appearance
-   - No spots or discoloration
+Classes: Late Blight, Healthy, Early Blight
 
-3. **Early Blight**
-   - Caused by the fungus *Alternaria solani*
-   - Symptoms: Dark brown spots with concentric rings
-   - Typically appears earlier in the growing season
+Model File: potato_disease_model1.keras
 
-## 🛠️ Development
+📊 Class Breakdown
+Class	Description
+Late Blight	Caused by Phytophthora infestans. Rapid spread. Water-soaked lesions.
+Healthy	No disease symptoms. Uniform green.
+Early Blight	Caused by Alternaria solani. Brown concentric rings on older leaves.
+📓 Notebook
+The notebook Potato Leaf Disease Classification project 2.ipynb includes:
 
-The model was developed in the Jupyter notebook `Potato Leaf Disease Classification project 2.ipynb`, which contains:
-- Data preprocessing
-- Model architecture
-- Training process
-- Evaluation metrics
-- Model saving
+Data loading from PlantVillage/ and datset/
 
-## 📝 Requirements
+Image preprocessing
 
-Listed in `requirements.txt`:
-```
+Model training
+
+Evaluation metrics
+
+Saving .keras model
+
+📝 Dependencies (requirements.txt)
+shell
+Copy
+Edit
 tensorflow>=2.10.0
 streamlit>=1.22.0
 pillow>=9.5.0
 numpy>=1.23.5
 matplotlib>=3.5.0
 opencv-python>=4.5.5
-```
+🤝 Contributing
+Found a bug or want to enhance the model/UI?
+Pull requests and suggestions are welcome!
 
-## 🤝 Contributing
+📄 License
+This project is licensed under the MIT License.
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+🙏 Acknowledgments
+PlantVillage Dataset
 
-## 📄 License
+TensorFlow and Streamlit contributors
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Agricultural experts and open-source community
 
-## 🙏 Acknowledgments
-
-- Dataset providers
-- Open-source community
-<<<<<<< HEAD
-- Agricultural experts for validation 
-=======
-- Agricultural experts for validation 
->>>>>>> d531f3a266e881cf5efd4e3da52ddacf1f2f97c6
