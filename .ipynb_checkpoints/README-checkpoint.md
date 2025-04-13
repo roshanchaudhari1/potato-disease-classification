@@ -144,8 +144,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Dataset providers
 - Open-source community
-<<<<<<< HEAD
 - Agricultural experts for validation 
-=======
-- Agricultural experts for validation 
->>>>>>> d531f3a266e881cf5efd4e3da52ddacf1f2f97c6
